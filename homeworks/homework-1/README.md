@@ -23,6 +23,16 @@ It is divided into two parts:
 Both problems require automation (scripts + Makefile), profiling experiments, and clear documentation with figures/tables.  
 
 
+## Pre-Reading & References
+Before starting this homework, make sure you have reviewed the following materials:
+
+- [Profiling: Essential for Efficient Code](./../../docs/01-Introduction-to-Profiling)
+- [Getting started with profiling](./../../docs/02-Getting-started-with-profiling)
+- [Learning Makefile](http://makefiletutorial.com/)
+
+
+
+
 
 ## Submission
 Your submission should include:
