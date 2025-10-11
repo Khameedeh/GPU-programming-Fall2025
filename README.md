@@ -37,7 +37,7 @@ Before starting this course, students should ensure they meet the following **ha
 ### Software
 - **CUDA Toolkit** 
 - **NVIDIA drivers** compatible with the CUDA version installed.  
-- **CMake** (for building projects).  
+- **Makefile** (for building projects).  
 - **Nsight Systems / Nsight Compute** for profiling, and **Visual Studio Code** with CUDA extensions.  
 
 ### Skills
