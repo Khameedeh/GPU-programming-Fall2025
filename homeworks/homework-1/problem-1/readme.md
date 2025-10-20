@@ -188,7 +188,7 @@ Run the experiments with increasing input sizes starting from ``N``=1024, doubli
 
 > Note: The listed deliverables are only examples to guide you. They illustrate the kind of plots or notes we expect, but you should make your own decisions about which figures, tables, and explanations best demonstrate your findings.
 
-### 3.4 Reporting guidance (3–5 pages incl. figures)
+### 3.4 Reporting guidance
 Structure your report professionally and concisely:
 1. **Setup**: CPU model, core/SMT count, compiler & flags, etc.
 2. **Methodology**: input generation strategy; how you invoked each profiler; how you parsed and aggregated results.
