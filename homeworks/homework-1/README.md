@@ -5,10 +5,9 @@
 - Raha Rahmanian  
 
 
-**Due date:** 17 October 2025  
+**Due date:** 24 October 2025  
 
-
-
+You can upload your assignment using the following link: [Upload Form](http://forms.gle/7gK74kopnYZwvBy86)
 
 ## Overview
 This homework focuses on understanding how **algorithms interact with hardware** by using profiling tools such as `perf` and `gprof`.  
