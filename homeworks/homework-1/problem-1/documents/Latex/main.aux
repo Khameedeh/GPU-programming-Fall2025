@@ -1,0 +1,89 @@
+\relax 
+\providecommand \babel@aux [2]{\global \let \babel@toc \@gobbletwo }
+\@nameuse{bbl@beforestart}
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\babel@aux{english}{}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Setup and Methodology}{1}{section.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Experimental Setup and Compiler Flags}{1}{subsection.1.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Compiler and Binary Configuration}}{1}{table.caption.1}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{tab:compiler_config}{{1}{1}{Compiler and Binary Configuration}{table.caption.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.2}Automation and Profiling Strategy}{1}{subsection.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.1}A. Input Generation}{2}{subsubsection.1.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1.2.2}B. Execution and Aggregation}{2}{subsubsection.1.2.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Profiling Tool and Metric Summary}}{2}{table.caption.2}\protected@file@percent }
+\newlabel{tab:profiling_summary}{{2}{2}{Profiling Tool and Metric Summary}{table.caption.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Results and Analysis}{2}{section.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Experiment 1: Algorithm Scaling (Array, int)}{2}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.1.1}Analysis}{2}{subsubsection.2.1.1}\protected@file@percent }
+\newlabel{fig:algorithm_scaling_runtime}{{1a}{2}{Comparison of Runtime ($s$) for Sorting Algorithms on Array}{figure.caption.3}{}}
+\newlabel{sub@fig:algorithm_scaling_runtime}{{a}{2}{Comparison of Runtime ($s$) for Sorting Algorithms on Array}{figure.caption.3}{}}
+\newlabel{fig:appendix_loglog}{{1b}{2}{Algorithm Runtime Scaling (Log-Log Scale)}{figure.caption.3}{}}
+\newlabel{sub@fig:appendix_loglog}{{b}{2}{Algorithm Runtime Scaling (Log-Log Scale)}{figure.caption.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Comparison of sorting algorithm runtimes. (a) Standard scale visually highlights the non-linear growth of the quadratic sorts. (b) The log-log scale confirms the distinct slopes corresponding to $O(N^2)$ and $O(N \log N)$ complexity.}}{2}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:combined_runtime}{{1}{2}{Comparison of sorting algorithm runtimes. (a) Standard scale visually highlights the non-linear growth of the quadratic sorts. (b) The log-log scale confirms the distinct slopes corresponding to $O(N^2)$ and $O(N \log N)$ complexity}{figure.caption.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Scaling Factor Analysis ($N=256K / N=32K$)}}{3}{table.caption.4}\protected@file@percent }
+\newlabel{tab:scaling_factor}{{3}{3}{Scaling Factor Analysis ($N=256K / N=32K$)}{table.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Experiment 2: Layout Impact (Fixed N)}{3}{subsection.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Analysis}{3}{subsubsection.2.2.1}\protected@file@percent }
+\newlabel{fig:exp2_dtlb}{{2a}{3}{dTLB-load-misses}{figure.caption.5}{}}
+\newlabel{sub@fig:exp2_dtlb}{{a}{3}{dTLB-load-misses}{figure.caption.5}{}}
+\newlabel{fig:exp2_l1dcache}{{2b}{3}{L1-dcache-load-misses}{figure.caption.5}{}}
+\newlabel{sub@fig:exp2_l1dcache}{{b}{3}{L1-dcache-load-misses}{figure.caption.5}{}}
+\newlabel{fig:exp2_ipc}{{2c}{3}{Instructions Per Cycle (IPC)}{figure.caption.5}{}}
+\newlabel{sub@fig:exp2_ipc}{{c}{3}{Instructions Per Cycle (IPC)}{figure.caption.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Hardware Performance Counters (HPCs) comparing Array vs. Linked List for Insertion Sort ($N=128K$). The non-contiguous memory access of Linked Lists causes significantly higher cache/TLB misses and a drastically reduced IPC, confirming memory latency is the hardware bottleneck.}}{3}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:layout_impact_hpc}{{2}{3}{Hardware Performance Counters (HPCs) comparing Array vs. Linked List for Insertion Sort ($N=128K$). The non-contiguous memory access of Linked Lists causes significantly higher cache/TLB misses and a drastically reduced IPC, confirming memory latency is the hardware bottleneck}{figure.caption.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Memory Hierarchy Impact ($\mathbf  {N=128K}$, Insertion, int)}}{3}{table.caption.6}\protected@file@percent }
+\newlabel{tab:memory_impact}{{4}{3}{Memory Hierarchy Impact ($\mathbf {N=128K}$, Insertion, int)}{table.caption.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Experiment 3: Data Type Impact (Merge, Array)}{4}{subsection.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Analysis}{4}{subsubsection.2.3.1}\protected@file@percent }
+\newlabel{fig:exp3_runtime}{{3a}{4}{Runtime comparison (s)}{figure.caption.7}{}}
+\newlabel{sub@fig:exp3_runtime}{{a}{4}{Runtime comparison (s)}{figure.caption.7}{}}
+\newlabel{fig:exp3_cycles}{{3b}{4}{Cycles vs. Input Size}{figure.caption.7}{}}
+\newlabel{sub@fig:exp3_cycles}{{b}{4}{Cycles vs. Input Size}{figure.caption.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Performance difference between 4-byte (\texttt  {int}) and 8-byte (\texttt  {double}) data types on Merge Sort (Array). The larger data type results in a noticeable increase in cycles and runtime, driven by both a larger memory footprint and increased instruction complexity.}}{4}{figure.caption.7}\protected@file@percent }
+\newlabel{fig:datatype_impact_plots}{{3}{4}{Performance difference between 4-byte (\texttt {int}) and 8-byte (\texttt {double}) data types on Merge Sort (Array). The larger data type results in a noticeable increase in cycles and runtime, driven by both a larger memory footprint and increased instruction complexity}{figure.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Data Type Impact on Runtime and Cache ($\mathbf  {N=256K}$, Merge, Array)}}{4}{table.caption.8}\protected@file@percent }
+\newlabel{tab:datatype_impact}{{5}{4}{Data Type Impact on Runtime and Cache ($\mathbf {N=256K}$, Merge, Array)}{table.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Call-Graph Evidence and Hotspot Attribution}{4}{subsection.2.4}\protected@file@percent }
+\gdef \LT@i {\LT@entry 
+    {1}{108.73788pt}\LT@entry 
+    {1}{157.11053pt}\LT@entry 
+    {1}{229.66211pt}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Discussion and Tool Comparison}{5}{section.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Identified Bottlenecks}{5}{subsection.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Comparison of Profiling Tools}{5}{subsection.3.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Comparison of Profiling Tools}}{5}{table.caption.9}\protected@file@percent }
+\newlabel{tab:tool_comparison}{{7}{5}{Comparison of Profiling Tools}{table.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Key Takeaways}{5}{subsection.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Submission Checklist and Reproduction Commands}{6}{section.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Submission Artifacts}}{6}{table.caption.10}\protected@file@percent }
+\newlabel{tab:submission_artifacts}{{8}{6}{Submission Artifacts}{table.caption.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Appendix: Universal Performance Metrics Summary}{6}{section.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Algorithmic Scaling Metrics (Runtime, Instructions, Cycles)}{6}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Memory Hierarchy Stall Metrics (Task Clock, L1 Misses, dTLB Misses)}{6}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Execution Efficiency Metrics (Branches, Misses, IPC)}{7}{subsection.5.3}\protected@file@percent }
+\newlabel{fig:app_sub_runtime_loglog}{{4a}{7}{Runtime Scaling (Log-Log)}{figure.caption.11}{}}
+\newlabel{sub@fig:app_sub_runtime_loglog}{{a}{7}{Runtime Scaling (Log-Log)}{figure.caption.11}{}}
+\newlabel{fig:app_sub_instructions}{{4b}{7}{Total Instructions Executed}{figure.caption.11}{}}
+\newlabel{sub@fig:app_sub_instructions}{{b}{7}{Total Instructions Executed}{figure.caption.11}{}}
+\newlabel{fig:app_sub_cycles}{{4c}{7}{Total CPU Cycles Consumed}{figure.caption.11}{}}
+\newlabel{sub@fig:app_sub_cycles}{{c}{7}{Total CPU Cycles Consumed}{figure.caption.11}{}}
+\newlabel{fig:app_sub_task_clock}{{4d}{7}{Total Task Clock Time ($ms$)}{figure.caption.11}{}}
+\newlabel{sub@fig:app_sub_task_clock}{{d}{7}{Total Task Clock Time ($ms$)}{figure.caption.11}{}}
+\newlabel{fig:app_sub_l1dcache}{{4e}{7}{Total L1 D-Cache Load Misses}{figure.caption.11}{}}
+\newlabel{sub@fig:app_sub_l1dcache}{{e}{7}{Total L1 D-Cache Load Misses}{figure.caption.11}{}}
+\newlabel{fig:app_sub_dtlb}{{4f}{7}{Total dTLB Load Misses}{figure.caption.11}{}}
+\newlabel{sub@fig:app_sub_dtlb}{{f}{7}{Total dTLB Load Misses}{figure.caption.11}{}}
+\newlabel{fig:app_sub_branches_total}{{4g}{7}{Total Branches Executed}{figure.caption.11}{}}
+\newlabel{sub@fig:app_sub_branches_total}{{g}{7}{Total Branches Executed}{figure.caption.11}{}}
+\newlabel{fig:app_sub_branches_misses}{{4h}{7}{Total Branch Misses}{figure.caption.11}{}}
+\newlabel{sub@fig:app_sub_branches_misses}{{h}{7}{Total Branch Misses}{figure.caption.11}{}}
+\newlabel{fig:app_sub_ipc}{{4i}{7}{Overall Instructions Per Cycle (IPC)}{figure.caption.11}{}}
+\newlabel{sub@fig:app_sub_ipc}{{i}{7}{Overall Instructions Per Cycle (IPC)}{figure.caption.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Universal Hardware and Runtime Metrics for all 48 Configurations.}}{7}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:universal_appendix_metrics}{{4}{7}{Universal Hardware and Runtime Metrics for all 48 Configurations}{figure.caption.11}{}}
+\gdef \@abspage@last{7}

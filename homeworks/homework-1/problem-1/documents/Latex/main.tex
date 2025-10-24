@@ -19,7 +19,7 @@
 
 \usepackage{graphicx}
 \usepackage{subcaption}
-
+\usepackage{xcolor}
 \usepackage{hyperref}
 
 \hypersetup{
@@ -35,7 +35,8 @@
 
 % Title Information
 \title{Sorting Algorithms: Profiling and Analysis}
-\author{Mehdi Khameedeh 40131873}
+\author{Mehdi Khameedeh 40131873\\Full HW file and individual results are available at this \href{https://github.com/Khameedeh/GPU-programming-Fall2025/tree/main/homeworks/homework-1/problem-1}{\textcolor{blue}{github link}}.
+}
 \date{October 2025}
 
 \begin{document}
@@ -101,7 +102,7 @@ The script iterates through all $4 \times 2 \times 3 \times 2 = 48$ unique confi
 We begin by analyzing the runtime of the three algorithms on the most efficient structure (\textbf{\texttt{array}}, \textbf{\texttt{int}}) across the full range of $N$ to confirm their theoretical complexity and establish the performance baseline.
 
 \subsubsection{Analysis}
-The measured scaling factors align perfectly with theory, showcasing the overwhelming impact of algorithmic complexity at scale. The $O(N^2)$ algorithms demonstrate a $64\times$ increase in time when $N$ is increased by $8\times$, confirming **algorithmic complexity is the primary bottleneck** at larger scales. Merge Sort's $10.0\times$ growth confirms its vastly superior $O(N \log N)$ scalability, making it the only viable option for large data sets.
+The measured scaling factors align perfectly with theory, showcasing the overwhelming impact of algorithmic complexity at scale. The $O(N^2)$ algorithms demonstrate a $64\times$ increase in time when $N$ is increased by $8\times$, confirming \textbf{algorithmic complexity is the primary bottleneck} at larger scales. Merge Sort's $10.0\times$ growth confirms its vastly superior $O(N \log N)$ scalability, making it the only viable option for large data sets.
 
 \begin{figure}[h]
     \centering
@@ -146,7 +147,7 @@ The quantitative data in Table \ref{tab:scaling_factor} solidifies the analysis,
 We fixed the input size ($N=128K$) and the algorithm (Insertion Sort) to isolate the cost of memory access when comparing the cache-friendly \texttt{array} (contiguous) and the cache-hostile \texttt{list} (scattered) layouts.
 
 \subsubsection{Analysis}
-The performance disparity is stark: the Linked List is over $4\times$ slower due to a severe loss of memory locality. The Hardware Performance Counters (HPCs) are conclusive, pointing to memory stalls as the root cause. The massive **$\mathbf{125\times}$ increase in dTLB-load-misses** is the most critical factor. This means the CPU is constantly failing to translate virtual memory addresses to physical addresses, forcing it to stall and fetch translations from main memory. This catastrophic inefficiency is summarized by the $3\times$ drop in **IPC** (from $3.65$ to $1.23$), indicating the CPU is stalled approximately $67\%$ of the time, waiting for data.
+The performance disparity is stark: the Linked List is over $4\times$ slower due to a severe loss of memory locality. The Hardware Performance Counters (HPCs) are conclusive, pointing to memory stalls as the root cause. The massive \textbf{$\mathbf{125\times}$ increase in dTLB-load-misses} is the most critical factor. This means the CPU is constantly failing to translate virtual memory addresses to physical addresses, forcing it to stall and fetch translations from main memory. This catastrophic inefficiency is summarized by the $3\times$ drop in \textbf{IPC} (from $3.65$ to $1.23$), indicating the CPU is stalled approximately $67\%$ of the time, waiting for data.
 
 \begin{figure}[h]
     \centering
@@ -237,7 +238,7 @@ The table below confirms the proportional relationship between data size, resour
 The \textbf{\texttt{gprof}} flat profile provides vital micro-level evidence, attributing time to specific functions. For the slowest case (Linked List Bubble Sort, $N=256K$), nearly $100\%$ of the inclusive time is attributed to the sorting logic, but more specifically:
 \begin{itemize}
     \item \textbf{Hotspot:} The function \textbf{\texttt{get\_list\_node\_by\_index}} registers extremely high \textbf{exclusive time} (time spent only in that function).
-    \item \textbf{Conclusion:} This function, which performs the inherently slow $\mathbf{O(N)}$ pointer traversals required to access scattered nodes in memory, is the **bottleneck hotspot**. The function's high exclusive time, coupled with the low $\mathbf{1.23}$ IPC measured by \texttt{perf}, reveals the critical failure point. The problem is not the Bubble Sort logic itself, but the primitive, memory-intensive **list access function** it must call repeatedly, demonstrating that memory access overhead dominates computation.
+    \item \textbf{Conclusion:} This function, which performs the inherently slow $\mathbf{O(N)}$ pointer traversals required to access scattered nodes in memory, is the \textbf{bottleneck hotspot}. The function's high exclusive time, coupled with the low $\mathbf{1.23}$ IPC measured by \texttt{perf}, reveals the critical failure point. The problem is not the Bubble Sort logic itself, but the primitive, memory-intensive \textbf{list access function} it must call repeatedly, demonstrating that memory access overhead dominates computation.
 \end{itemize}
 
 \section{Discussion and Tool Comparison}
